@@ -54,7 +54,6 @@ RUN mkdir -p /home/jupyter/workspace/notebooks \
 
 WORKDIR /home/jupyter/workspace
 
-
 # Copy project files 
 COPY --chown=jupyter:jupyter . .
 
