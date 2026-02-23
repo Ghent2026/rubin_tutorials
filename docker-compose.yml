@@ -1,0 +1,15 @@
+services:
+  jupyterlab:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: educado_jupyterlab
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/home/jupyter/workspace
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - ANTHROPIC_MODEL=opus
+      - ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-6
+    restart: unless-stopped

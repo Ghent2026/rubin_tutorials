@@ -1,0 +1,11 @@
+## Learning Objectives
+
+By the end of this notebook you should be able to:
+
+1. Explain what étendue is and why it is the key figure of merit for a survey telescope.
+2. Look up the relevant optical parameters in the LSST Overview Paper and Rubin Key Numbers page.
+3. Calculate the collecting area of an annular mirror, accounting for real-world obscurations.
+4. Calculate the solid angle of a circular field of view.
+5. Combine these to compute étendue and compare your result to the official quoted value.
+6. Explain quantitatively why Rubin/LSST is a uniquely powerful survey instrument.
+
