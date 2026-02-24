@@ -1,6 +1,6 @@
 # EDUCADO_2026
 
-This directory provides a Docker container to run a JuypterLab instance to run the educado tutorials 
+This directory provides a Docker container to run a JuypterLab instance with the LSST Science Pipelines installed to run the educado tutorials 
 
 ## Setting up the jupyterlab instance using Dcocker
 
