@@ -23,4 +23,12 @@ def _patch_anthropic_models():
     except Exception:
         pass  # silently skip if jupyter-ai is not installed or API changes
 
+c = get_config()
+
+# Disable token/password (dev only — remove for production)
+c.ServerApp.token = ""
+c.ServerApp.password = ""
+c.ServerApp.allow_origin = "*"
+c.ServerApp.ip = "0.0.0.0"
+
 _patch_anthropic_models()
