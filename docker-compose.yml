@@ -1,6 +1,8 @@
 services:
   jupyterlab:
     build:
+      args:
+        LSST_VERSION: al9-v29_2_1
       context: .
       dockerfile: docker/Dockerfile
     container_name: educado_jupyterlab

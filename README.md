@@ -13,9 +13,18 @@ This directory provides a Docker container to run a JuypterLab instance with the
 4. Build and start the container
    > docker compose up --build
 
+   To change the version of the sicnece pipelines 
+   > docker compose build --build-arg LSST_VERSION=al9-w_2025_29
+   > docker compose up 
+
 5. Open http://localhost:8888 (http://127.0.0.1:8888/lab)  to see the JupyteLab server
 If you are using Cursor, use cmd+click and it will open a tab in Cursor. Otherwise you can go to a browser. 
 Go to  JupyterLab and explore the files. You should see JupyterLab with a LSST Science Pipelines kernel availble
 
 Open any of th tutorials and run them
+
+6. The version of the science pipelines can also be changed in the docker-compose.yml file 
+     build:
+      args:
+        LSST_VERSION: al9-v29_2_1
    
