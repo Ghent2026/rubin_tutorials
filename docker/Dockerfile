@@ -1,4 +1,7 @@
-FROM ghcr.io/lsst/scipipe:al9-v29_2_1
+# LSST image version — override at build time with:
+#   docker compose build --build-arg LSST_VERSION=al9-w_2025_29
+ARG LSST_VERSION=al9-v29_2_1
+FROM ghcr.io/lsst/scipipe:${LSST_VERSION}
 
 # Set to a plain non-login bash shell here
 SHELL ["/bin/bash", "-c"]
@@ -73,15 +76,17 @@ WORKDIR /home/jupyter/workspace
 # Copy project files
 COPY --chown=jupyter:jupyter . .
 
-# Entrypoint 
+# Entrypoint
+# Use explicit bash invocation to avoid execute-bit permission issues that can
+# occur on some host filesystems / Docker Desktop versions (exit code 126).
 COPY docker/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+RUN chmod 755 /usr/local/bin/docker-entrypoint.sh
 
 EXPOSE 8888
 
 USER jupyter
 
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "/usr/local/bin/docker-entrypoint.sh"]
 CMD ["jupyter", "lab", \
      "--ip=0.0.0.0", \
      "--port=8888", \
