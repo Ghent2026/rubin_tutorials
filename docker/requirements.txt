@@ -14,6 +14,8 @@ bokeh
 holoviews
 
 fink-utils
+fink-client
+
 lasair
 ampel-interface
 
