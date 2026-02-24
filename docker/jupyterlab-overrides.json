@@ -1,0 +1,13 @@
+{
+  "@jupyterlab/apputils-extension:notification": {
+    "checkForUpdates": false,
+    "fetchNews": "false"
+  },
+  "@jupyterlab/apputils-extension:sessionDialogs": {
+    "skipKernelRestartDialog": true
+  },
+  "@jupyterlab/notebook-extension:tracker": {
+    "kernelShutdown": false,
+    "recordTiming": false
+  }
+}
