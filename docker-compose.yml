@@ -14,4 +14,5 @@ services:
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
       - ANTHROPIC_MODEL=opus
       - ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-6
+      - LASAIR_TOKEN=${LASAIR_API_KEY}
     restart: unless-stopped
