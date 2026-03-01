@@ -9,15 +9,9 @@ SHELL ["/bin/bash", "-c"]
 # All installation steps run as root
 USER root
 
-# System packages 
-# nodejs lives in the AppStream module stream and must be enabled first;
-# Claude Code is a Nodejs application if Claude code is not installed then this is not needed.
-RUN dnf module enable -y nodejs:20 \
-    && dnf install -y nodejs \
-    && dnf clean all
-
-# Claude Code CLI 
-RUN npm install -g @anthropic-ai/claude-code
+# Claude Code CLI (native installer — no Node.js required)
+RUN curl -fsSL https://claude.ai/install.sh | bash
+ENV PATH="/root/.local/bin:${PATH}"
 
 # Non-root user 
 RUN useradd --create-home --shell /bin/bash jupyter
