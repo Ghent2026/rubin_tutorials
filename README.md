@@ -16,6 +16,7 @@ This directory provides a Docker container to run a JuypterLab instance with the
    To change the version of the sicnece pipelines 
    > docker compose build --build-arg LSST_VERSION=al9-w_2025_29
    > docker compose up 
+   > d (to free terminal)
 
 5. Open http://localhost:8888 (http://127.0.0.1:8888/lab)  to see the JupyteLab server
 If you are using Cursor, use cmd+click and it will open a tab in Cursor. Otherwise you can go to a browser. 
@@ -28,3 +29,5 @@ Open any of th tutorials and run them
       args:
         LSST_VERSION: al9-v29_2_1
    
+7. Stop the service 
+   > docker compose down
