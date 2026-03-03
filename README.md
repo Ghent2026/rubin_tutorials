@@ -7,8 +7,8 @@ This directory provides a Docker container to run a JuypterLab instance with the
 1. Install and start Docker. If updates are avalable, install them.
 
 2. Clone this repository
-   > git clone git@github.com:leannep/EDUCADO_2026.git
-   > cd EDUCADO_2026
+   > git clone git@github.com:Ghent2026/rubin_tutorials.git
+   > cd rubin_tutorials
 
 4. Build and start the container
    > docker compose up --build
