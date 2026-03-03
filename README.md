@@ -24,7 +24,7 @@ Go to  JupyterLab and explore the files. You should see JupyterLab with a LSST S
 
 Open any of the tutorials and run them
 
-6. Clone some other interesting repositories with tutorial examples
+6. Clone some other interesting repositories with tutorial examples, e.g. 
    > cd data
    > git clone git@github.com:alercebroker/usecases.git alerce_usecases
 
