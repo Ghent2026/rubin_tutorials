@@ -22,12 +22,17 @@ This directory provides a Docker container to run a JuypterLab instance with the
 If you are using Cursor, use cmd+click and it will open a tab in Cursor. Otherwise you can go to a browser. 
 Go to  JupyterLab and explore the files. You should see JupyterLab with a LSST Science Pipelines kernel availble
 
-Open any of th tutorials and run them
+Open any of the tutorials and run them
 
-6. The version of the science pipelines can also be changed in the docker-compose.yml file 
+6. Clone some other interesting repositories with tutorial examples
+   > cd data
+   > git clone git@github.com:alercebroker/usecases.git alerce_usecases
+
+6. The version of the science pipelines can  be changed in the docker-compose.yml file 
      build:
       args:
         LSST_VERSION: al9-v29_2_1
+   You will need to stop and restart the service for this to take effect
    
-7. Stop the service 
+8. Stop the service 
    > docker compose down
