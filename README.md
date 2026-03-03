@@ -26,7 +26,7 @@ Open any of the tutorials and run them
 
 6. Clone some other interesting repositories with tutorial examples, e.g. 
    > cd data  
-   > git clone git@github.com:alercebroker/usecases.git alerce_usecases
+   > git clone git@github.com:alercebroker/usecases.git alerce_usecases  
    > git clone git@github.com:Ghent2026/about-photometry.git  
 
 6. The version of the science pipelines can  be changed in the docker-compose.yml file 
