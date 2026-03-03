@@ -3,11 +3,12 @@ ipykernel
 
 numpy
 scipy
-astropy
+astropy>=5.2
 healpy
 pyarrow
 pandas
 requests
+Path
 
 matplotlib
 bokeh
@@ -15,7 +16,7 @@ holoviews
 
 fink-utils
 fink-client
-
+alerce
 lasair
 ampel-interface
 
