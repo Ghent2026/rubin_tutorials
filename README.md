@@ -1,4 +1,4 @@
-# EDUCADO_2026
+# Rubin Tutorials for the EDUCADO 2026 school in Ghent
 
 This directory provides a Docker container to run a JuypterLab instance with the LSST Science Pipelines installed to run the educado tutorials 
 
